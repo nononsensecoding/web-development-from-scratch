@@ -76,38 +76,3 @@ button:hover {
   flex-direction: column;
   margin-top: 200px;
 }
-
-#search-container {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-#search-textbox {
-  width: 400px;
-  height: 30px;
-  padding: 0;
-  border: 1px solid #dfe1e5;
-}
-
-#search-buttons {
-  margin-bottom: 20px;
-}
-
-#search-suggestions {
-  width: 400px;
-  background-color: #fff;
-  border: 0;
-  box-shadow: 0 4px 6px 0 rgba(32, 33, 36, 0.28);
-  padding: 4px 0;
-}
-
-#search-suggestions ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#search-suggestions ul li {
-  padding: 6px 0 6px 10px;
-  font-size: 16px;
-}
