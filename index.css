@@ -25,6 +25,12 @@ button {
   background-color: #ddd;
 }
 
+/* Utility classes */
+
+.hide {
+  display: none;
+}
+
 /* Page-specific elements */
 
 #header {
@@ -66,4 +72,11 @@ button {
 
 #search-buttons {
   margin-bottom: 20px;
+}
+
+#search-suggestions {
+  width: 400px;
+  height: 100px;
+  background-color: #fff;
+  border: 1px solid #000000;
 }
