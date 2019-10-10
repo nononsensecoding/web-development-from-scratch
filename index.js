@@ -1,21 +1,33 @@
+var hideClassName = "hide";
+var searchInputId = "search-textbox";
+var searchSuggestionsId = "search-suggestions";
+var searchSuggestions;
+var searchInput;
+
+onPageLoad();
+
+function onPageLoad() {
+  searchSuggestions = document.getElementById(searchSuggestionsId);
+  searchInput = document.getElementById(searchInputId);
+
+  addEventListeners();
+}
+
+function addEventListeners() {
+  searchInput.addEventListener("click", showSearchSuggestions);
+  window.addEventListener("click", handleWindowClick);
+}
+
 function showSearchSuggestions() {
-  var searchSuggestions = document.getElementById("search-suggestions");
-  searchSuggestions.classList.remove("hide");
+  searchSuggestions.classList.remove(hideClassName);
 }
 
 function hideSearchSuggestions() {
-  var searchSuggestions = document.getElementById("search-suggestions");
-  searchSuggestions.classList.add("hide");
+  searchSuggestions.classList.add(hideClassName);
 }
 
 function handleWindowClick(event) {
-  if (event.target.id !== "search-textbox") {
+  if (event.target.id !== searchInputId) {
     hideSearchSuggestions();
   }
 }
-
-var searchTextbox = document.getElementById("search-textbox");
-
-searchTextbox.addEventListener("click", showSearchSuggestions);
-
-window.addEventListener("click", handleWindowClick);
